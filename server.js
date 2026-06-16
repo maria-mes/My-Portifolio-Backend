@@ -56,6 +56,10 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'Backend is running!' });
 });
 
+app.get("/", (req, res) => {
+  res.json({ success: true, message: "Backend is live!" });
+});
+
 // Contact form submission
 app.post('/api/contact', async (req, res) => {
     try {
